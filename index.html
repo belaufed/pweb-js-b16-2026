@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Shopee</title>
+</head>
+
+
+<body>
+
+    <h1>Mini Shopee</h1>
+
+    <input 
+    id="cariProduk"
+    type="text"
+    placeholder="Cari produk..."
+>
+
+    <select id="pilihKategori">
+    <option value="semua">
+        Semua Kategori
+    </option>
+</select>
+
+<select id="pilihUrutan">
+
+    <option value="default">
+        Urutan Default
+    </option>
+
+    <option value="hargaMurah">
+        Harga Termurah
+    </option>
+
+    <option value="hargaMahal">
+        Harga Termahal
+    </option>
+
+    <option value="rating">
+        Rating Tertinggi
+    </option>
+
+</select>
+
+    <!-- Tempat produk muncul -->
+    <div id="product-grid"></div>
+    
+    <button id="tombolLoadMore">
+    Load More
+</button>
+
+    <script src="js/produk.js" defer></script>
+
+</body>
+
+</html>
