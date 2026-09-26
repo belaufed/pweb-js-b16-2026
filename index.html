@@ -1,57 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Shopee</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/catalog.css">
 </head>
-
 
 <body>
 
+    <header id="navbar">
+        <span id="navbar-greeting"></span>
+        <div style="display:flex; align-items:center; gap:12px;">
+            <!-- Orang 3: badge jumlah item & total harga keranjang ditaruh di sini -->
+            <div id="cart-summary"></div>
+            <button id="btnLogout">Logout</button>
+        </div>
+    </header>
+
     <h1>Mini Shopee</h1>
 
-    <input 
-    id="cariProduk"
-    type="text"
-    placeholder="Cari produk..."
->
+    <input
+        id="cariProduk"
+        type="text"
+        placeholder="Cari produk..."
+    >
 
     <select id="pilihKategori">
-    <option value="semua">
-        Semua Kategori
-    </option>
-</select>
+        <option value="semua">
+            Semua Kategori
+        </option>
+    </select>
 
-<select id="pilihUrutan">
+    <select id="pilihUrutan">
 
-    <option value="default">
-        Urutan Default
-    </option>
+        <option value="default">
+            Urutan Default
+        </option>
 
-    <option value="hargaMurah">
-        Harga Termurah
-    </option>
+        <option value="hargaMurah">
+            Harga Termurah
+        </option>
 
-    <option value="hargaMahal">
-        Harga Termahal
-    </option>
+        <option value="hargaMahal">
+            Harga Termahal
+        </option>
 
-    <option value="rating">
-        Rating Tertinggi
-    </option>
+        <option value="rating">
+            Rating Tertinggi
+        </option>
 
-</select>
+    </select>
 
     <!-- Tempat produk muncul -->
     <div id="product-grid"></div>
-    
-    <button id="tombolLoadMore">
-    Load More
-</button>
 
-    <script src="js/produk.js" defer></script>
+    <button id="tombolLoadMore">
+        Load More
+    </button>
+
+    <button id="tombolResetFilter">
+        Reset Filter
+    </button>
+
+    <!-- Urutan sesuai kontrak tim: auth.js -> cart.js -> modal.js -> products.js (semua defer) -->
+    <!-- cart.js dan modal.js (Orang 3) belum ada, tinggal disisipkan di antara auth.js dan products.js -->
+    <script src="js/auth.js" defer></script>
+    <script src="js/products.js" defer></script>
 
 </body>
 
