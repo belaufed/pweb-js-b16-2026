@@ -1,0 +1,244 @@
+.cart-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.cart-toggle:hover {
+    background: var(--color-bg);
+}
+
+.cart-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.cart-total {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.cart-panel {
+    position: fixed;
+    top: 60px;
+    right: 16px;
+    width: 300px;
+    max-height: 70vh;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+}
+
+.cart-panel--open {
+    display: flex;
+}
+
+.cart-panel__empty {
+    padding: 20px;
+    text-align: center;
+    color: var(--color-muted);
+}
+
+.cart-panel__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 10px;
+}
+
+.cart-item__thumb {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: var(--color-bg);
+}
+
+.cart-item__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cart-item__title {
+    font-size: 0.85rem;
+    margin: 0 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-item__price {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin: 0 0 4px;
+}
+
+.cart-item__qty {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-qty {
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.btn-qty:hover {
+    background: var(--color-bg);
+}
+
+.btn-remove-cart {
+    border: none;
+    background: none;
+    color: var(--color-muted);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 4px;
+}
+
+.btn-remove-cart:hover {
+    color: var(--color-primary);
+}
+
+.cart-panel__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.95rem;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    padding: 16px;
+}
+
+.modal-overlay--open {
+    display: flex;
+}
+
+.modal-box {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 420px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background: var(--color-bg);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.modal-close:hover {
+    background: var(--color-border);
+}
+
+.modal-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    background: var(--color-bg);
+    margin-bottom: 12px;
+}
+
+.modal-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.modal-title {
+    font-size: 1.2rem;
+    margin: 0 0 6px;
+}
+
+.modal-brand {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    margin: 0 0 8px;
+}
+
+.modal-price-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.modal-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.modal-stock {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 10px;
+}
+
+.modal-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.modal-box .btn-add-cart {
+    width: 100%;
+}
